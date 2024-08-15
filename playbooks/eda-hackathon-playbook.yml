@@ -1,0 +1,12 @@
+- name: EDA Hackthon Playbook
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Print the Source Username
+      ansible.builtin.debug:
+        var: "{{ src_username }}"
+
+    - name: Print the Source Password
+      ansible.builtin.debug:
+        var: "{{ src_password }}"

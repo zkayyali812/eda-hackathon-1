@@ -1,0 +1,6 @@
+files/*
+*.pem
+manifest.zip
+.DS_Store
+.vscode
+*.log
