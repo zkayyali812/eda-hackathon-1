@@ -1,12 +1,13 @@
-- name: EDA Hackthon Playbook
+- name: EDA Hackathon Playbook
   hosts: localhost
   connection: local
+  gather_facts: false
 
   tasks:
     - name: Print the Source Username
       ansible.builtin.debug:
-        var: "{{ src_username }}"
+        msg: "{{ src_username }}"
 
     - name: Print the Source Password
       ansible.builtin.debug:
-        var: "{{ src_password }}"
+        msg: "{{ src_password }}"
