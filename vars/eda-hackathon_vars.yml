@@ -3,39 +3,3 @@ ansible_ssh_pipelining: true
 ansible_ssh_extra_args: '-o StrictHostKeyChecking=no -o ControlMaster=auto -o ControlPersist=60s'
 
 slug: eda-hackathon
-
-
-
-# aap:
-#   install_dir: "~{{ ansible_user_id }}/aap_installer"
-#   install_command: ANSIBLE_BECOME_METHOD='sudo' ANSIBLE_BECOME=True ./setup.sh -e gpgcheck=0 -e aw_repo_url=http://nightlies.testing.ansible.com/ansible-tower_nightlies_m8u16fz56qr6q7/devel/ # noqa yaml[line-length]
-
-# ec2:
-#   region: eu-west-1
-#   ami_id: ami-07d4917b6f95f5c2a # RHEL 9 x86 eu-west-1
-#   # ami_id: ami-0a45c8b16782f3406 # RHEL 9 x86 uhttps://ansible-lint.readthedocs.io/rules/yaml/s-east-1
-#   instance_type: t3.xlarge
-#   key_name: aapaaskey
-#   security_group_name: ansible-aas-sg
-#   vpc_name: ansible-aas-vpc
-
-# ec2_instances:
-#   - vm_name: "{{ slug }}-controller"
-#     tags:
-#       node_type: controller
-#   - vm_name: "{{ slug }}-eda"
-#     tags:
-#       node_type: eda
-#   - vm_name: "{{ slug }}-hub"
-#     tags:
-#       node_type: hub
-#   - vm_name: "{{ slug }}-gateway"
-#     tags:
-#       node_type: gateway
-#   - vm_name: "{{ slug }}-pgsql"
-#     tags:
-#       node_type: gateway
-#   # - vm_name: "{{ slug }}-bastion"
-
-# redhat_username: "{{ lookup('ansible.builtin.env', 'REDHAT_USERNAME') }}"
-# redhat_password: "{{ lookup('ansible.builtin.env', 'REDHAT_PASSWORD') }}"

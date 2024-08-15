@@ -1,5 +1,5 @@
 ---
-- name: EDA Hackathon Rulebook 
+- name: EDA Hackathon Rulebook
   hosts: localhost
   sources:
     - name: listen for alerts
