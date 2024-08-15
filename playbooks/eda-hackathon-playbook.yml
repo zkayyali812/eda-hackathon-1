@@ -6,8 +6,8 @@
   tasks:
     - name: Print the Source Username
       ansible.builtin.debug:
-        msg: "{{ src_username }}"
+        msg: "EDA Custom Credential Username: {{ src_username }}"
 
     - name: Print the Source Password
       ansible.builtin.debug:
-        msg: "{{ src_password }}"
+        msg: "EDA Custom Credential Password: {{ src_password }}"
