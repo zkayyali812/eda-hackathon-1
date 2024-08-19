@@ -7,8 +7,7 @@
         host: 0.0.0.0
         port: 5000
   rules:
-    - name: server down
-      # condition: event.alert.labels.job == "server" and event.alert.status == "firing"
+    - name: Ansible message
       condition: event.payload.message == "Ansible is super cool"
       action:
         run_job_template:
@@ -17,3 +16,10 @@
           job_args:
             extra_vars:
               job_template_name: "{{ job_template_name }}"
+              vault_msg: !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                61613633393330396531373562353037656337363432323364646239653566313733303963316539
+                6438373963643239393365623939393631383465386432640a356432653963363338636539383330
+                63396265633461393934613535363931353937643662653662316165666361333664396639646661
+                3533613930376566630a326433653332373939326266613839373435626238326434633261306232
+                36626262333632393363306363373330633339323563343664616261613064653132
