@@ -12,10 +12,10 @@
       action:
         run_job_template:
           organization: Default
-          name: "{{ vars.job_template_name }}"
+          name: "{{ job_template_name }}"
           job_args:
             extra_vars:
-              job_template_name: "{{ job_template_name }}"
+              job_template_name: "{{ vars.job_template_name }}"
               vault_msg: !vault |
                 $ANSIBLE_VAULT;1.1;AES256
                 61613633393330396531373562353037656337363432323364646239653566313733303963316539
