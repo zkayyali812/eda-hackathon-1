@@ -1,5 +1,0 @@
----
-ansible_ssh_pipelining: true
-ansible_ssh_extra_args: '-o StrictHostKeyChecking=no -o ControlMaster=auto -o ControlPersist=60s'
-
-slug: eda-hackathon
