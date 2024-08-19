@@ -4,10 +4,10 @@
   gather_facts: false
 
   tasks:
-    - name: Print the Source Username
+    - name: Print the vaulted message
       ansible.builtin.debug:
-        msg: "EDA Custom Credential Username: {{ src_username }}"
+        msg: "Vault message: {{ vault_msg }}"
 
-    - name: Print the Source Password
+    - name: Print template name
       ansible.builtin.debug:
-        msg: "EDA Custom Credential Password: {{ src_password }}"
+        msg: "Your job template variable: {{ job_template_name }}"
