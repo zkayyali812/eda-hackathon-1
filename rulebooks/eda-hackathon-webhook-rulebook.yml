@@ -12,7 +12,7 @@
       action:
         run_job_template:
           organization: Default
-          name: "{{ vars.job_template_name }}"
+          name: "{{ job_template_name }}"
           job_args:
             extra_vars:
               job_template_name: "{{ vars.job_template_name }}"
