@@ -16,7 +16,7 @@
       condition: true
       action:
         debug:
-          var: event.meta
+          var: event.payload
     - name: server down
       condition: event.meta is defined
       action:
