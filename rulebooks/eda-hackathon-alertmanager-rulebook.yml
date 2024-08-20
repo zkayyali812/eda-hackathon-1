@@ -12,6 +12,11 @@
       action:
         debug:
           var: event
+    - name: Webhook rule
+      condition: true
+      action:
+        debug:
+          var: event.meta
     - name: server down
       condition: event.meta is defined
       action:
