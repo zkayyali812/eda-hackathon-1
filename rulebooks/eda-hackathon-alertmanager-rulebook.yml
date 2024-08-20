@@ -11,7 +11,7 @@
       condition: true
       action:
         debug:
-          msg: {{ event.keys() }}
+          msg: "{{ event.keys() }}"
     - name: server down
       condition: true
       action:
