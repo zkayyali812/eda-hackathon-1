@@ -12,7 +12,7 @@
       action:
         debug:
           var: event
-    - name: Webhook rule
+    - name: Webhook rule2
       condition: true
       action:
         debug:
