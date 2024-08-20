@@ -1,0 +1,9 @@
+---
+- name: 
+  hosts: all
+  tasks:
+    - ansible.builtin.uri:
+      url: https://5ugablmjipljhua20vjgnz.hooks.webhookrelay.com
+      method: POST
+      body_format: json
+      src: files/fake-alert.json
