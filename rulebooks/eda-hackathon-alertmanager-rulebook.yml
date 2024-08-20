@@ -16,4 +16,9 @@
           job_args:
             extra_vars:
               job_template_name: "hk-user-4-jt"
+    - name: server down2
+      condition: true
+      action:
+        debug:
+           msg: "{{ event }}"
       
