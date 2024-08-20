@@ -8,8 +8,7 @@
         port: 5000
   rules:
     - name: server down
-      # condition: event.alert.labels.job == "server" and event.alert.status == "firing"
-      condition: event.payload.message == "Ansible is super cool"
+      condition: event.alert.labels.job == "server" and event.alert.status == "firing"
       action:
         run_job_template:
           organization: Default
