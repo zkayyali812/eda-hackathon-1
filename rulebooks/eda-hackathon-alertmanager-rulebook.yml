@@ -10,8 +10,8 @@
     - name: Webhook rule
       condition: true
       action:
-        print_event:
-          pretty: true
+        debug:
+          var: event
     - name: server down
       condition: event.meta is defined
       action:
