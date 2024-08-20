@@ -11,3 +11,4 @@
       condition: event.payload.message == "Ansible is super cool"
       action:
         debug:
+          var: job_template_name
