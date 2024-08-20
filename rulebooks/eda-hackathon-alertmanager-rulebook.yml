@@ -11,14 +11,9 @@
       condition: true
       action:
         debug:
-          var: event | to_json
-    - name: Webhook rule2
-      condition: true
-      action:
-        debug:
-          var: (event | to_json)
+          var: (event | to_json).payload
     - name: server down
-      condition: event.meta is defined
+      condition: (event | to_json).payload is defined
       action:
         run_job_template:
           organization: Default
