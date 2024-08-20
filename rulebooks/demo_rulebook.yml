@@ -11,4 +11,4 @@
       condition: event.msg == "Welcome"
       action:
         debug:
-          msg: "Hello from EDA"
+          msg: "{{ event.msg }} from EDA"
