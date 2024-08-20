@@ -7,18 +7,13 @@
         host: 0.0.0.0
         port: 5000
   rules:
-    # - name: Webhook rule
-    #   condition: event.payload.status == "firing"
-    #   action:
-    #     debug:
-    #       msg: "{{ event.payload.keys() }} \n Actual Payload {{ event.payload }}"
     - name: server down
       condition: event.payload.status == "firing"
       action:
         run_job_template:
           organization: Default
-          name: "{{ job_template_name }}"
+          name: "hk-user-4-jt"
           job_args:
             extra_vars:
-              job_template_name: "{{ job_template_name }}"
+              job_template_name: "hk-user-4-jt"
       
