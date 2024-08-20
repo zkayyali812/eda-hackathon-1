@@ -9,16 +9,14 @@
   rules:
     - name: server down
       condition: event.payload.status == "firing"
-      action:
-        run_job_template:
-          organization: Default
-          name: "hk-user-4-jt"
-          job_args:
-            extra_vars:
-              job_template_name: "hk-user-4-jt"
-    - name: server down2
-      condition: true
-      action:
-        debug:
-           msg: "{{ event }}"
+      - action:
+          run_job_template:
+            organization: Default
+            name: "hk-user-4-jt"
+            job_args:
+              extra_vars:
+                job_template_name: "hk-user-4-jt"
+      - action:
+          debug:
+             msg: "{{ event }}"
       
